@@ -1,4 +1,4 @@
-SRC = main.cpp Array.tpp
+SRC = main.cpp
 NAME = array
 CPPFLAGS = -Werror -Wextra -Wall -std=c++98
 OBJ=$(SRC:%.cpp=%.o)
