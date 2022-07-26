@@ -5,7 +5,7 @@
 # include <string>
 
 template <class lol>
-void swap (lol a, lol b)
+void swap (lol& a, lol& b)
 {
 	lol tmp = b;
 	b = a;
