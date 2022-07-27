@@ -7,9 +7,11 @@
 template <class lol>
 void	iter(lol* first, size_t length, void (*fon)(lol& p))
 {
+	if (!first)
+		return ;
 	for (size_t i = 0; i < length; i++)
 	{
-		fon(*(first + i));
+		fon(first[i]);
 	}
 };
 

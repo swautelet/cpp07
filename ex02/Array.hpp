@@ -7,23 +7,56 @@
 template <class T>
 class Array{
 	public:
-		Array();
-		Array(unsigned int n);
-		Array(const Array& copi);
-		~Array();
-		Array& operator =(const Array& copi);
-		unsigned int size() const;
-		T& operator[](unsigned int i);
 		class OutOfRange:public std::exception{
-			const char* what() const throw();
+			const char* what() const throw(){
+				return ("Error this is out of range");
+			}
 		};
+		Array<T>(){
+			this->_size = 0;
+			this->_content = NULL;;
+			}
+		Array<T>(unsigned int n){
+			this->_size = n;
+			this->_content = new T[n];
+		}
+		Array<T>(const Array<T>& copi){
+			this->_size = copi.size();
+			this->_content = new T[this->_size];
+			for (unsigned int i = 0; i < this->_size; i++)
+			{
+				this->_content[i] = copi[i];
+			}
+		}
+		~Array<T>(){
+			delete[] this->_content;
+		}
+		Array<T>& operator =(const Array<T>& copi){
+			for (unsigned int i = 0; i < this->_size; i++)
+			{
+				this->_content[i] = copi[i];
+			}
+		}
+		unsigned int size() const{
+			return(this->_size);
+		}
+		T& operator[](unsigned int i){
+			if (i >= this->_size)
+			{
+				throw(OutOfRange());
+			}
+			return(this->_content[i]);
+		}
+		// };
 
 	private:
-		unsigned int const _size;
+		unsigned int _size;
 		T* _content;
 
 	protected:
 
 };
+
+// #include "Array.tpp"
 
 #endif
