@@ -15,7 +15,7 @@ class Array{
 		Array<T>(){
 			this->_size = 0;
 			this->_content = NULL;;
-			}
+		}
 		Array<T>(unsigned int n){
 			this->_size = n;
 			this->_content = new T[n];
@@ -47,7 +47,6 @@ class Array{
 			}
 			return(this->_content[i]);
 		}
-		// };
 
 	private:
 		unsigned int _size;
@@ -56,7 +55,5 @@ class Array{
 	protected:
 
 };
-
-// #include "Array.tpp"
 
 #endif
