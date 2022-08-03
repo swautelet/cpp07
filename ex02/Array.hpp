@@ -20,6 +20,13 @@ class Array{
 			this->_size = n;
 			this->_content = new T[n];
 		}
+		T& operator[](ssize_t i) const{
+			if (i >= this->_size || i < 0)
+			{
+				throw(OutOfRange());
+			}
+			return(this->_content[i]);
+		}
 		Array<T>(const Array<T>& copi){
 			this->_size = copi.size();
 			this->_content = new T[this->_size];
@@ -39,13 +46,6 @@ class Array{
 		}
 		unsigned int size() const{
 			return(this->_size);
-		}
-		T& operator[](ssize_t i){
-			if (i >= this->_size || i < 0)
-			{
-				throw(OutOfRange());
-			}
-			return(this->_content[i]);
 		}
 
 	private:
