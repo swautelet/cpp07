@@ -40,8 +40,8 @@ class Array{
 		unsigned int size() const{
 			return(this->_size);
 		}
-		T& operator[](unsigned int i){
-			if (i >= this->_size)
+		T& operator[](ssize_t i){
+			if (i >= this->_size || i < 0)
 			{
 				throw(OutOfRange());
 			}
