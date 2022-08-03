@@ -33,5 +33,13 @@ int main()
 	}
 	{
 		Array<std::string> test;
+		try 
+		{
+			std::cout << test[0] << std::endl;
+		}
+		catch (std::exception& e)
+		{
+			std::cout << e.what() << std::endl;
+		}
 	}
 }
