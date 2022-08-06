@@ -4,23 +4,23 @@
 # include <iostream>
 # include <string>
 
-template <class lol>
-void swap (lol& a, lol& b)
+template <class T>
+void swap (T& a, T& b)
 {
-	lol tmp = b;
+	T tmp = b;
 	b = a;
 	a = tmp;
 };
-template <class lol>
-lol min (lol a, lol b)
+template <class T>
+T min (T a, T b)
 {
 	if (a < b)
 		return a;
 	else
 		return b;
 };
-template <class lol>
-lol max (lol a, lol b)
+template <class T>
+T max (T a, T b)
 {
 	if (a > b)
 		return a;

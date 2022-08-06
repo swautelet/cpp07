@@ -4,8 +4,8 @@
 #include<iostream>
 #include<string>
 
-template <class lol>
-void	iter(lol* first, size_t length, void (*fon)(lol& p))
+template <class iter>
+void	iter(iter* first, size_t length, void (*fon)(iter& p))
 {
 	if (!first || !fon)
 		return ;
