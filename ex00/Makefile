@@ -27,4 +27,4 @@ save :
 	git commit -am "$(MAKECMDGOALS)"
 	git push https://github.com/swautelet/cpp07.git
 
-.phony : fclean clean re all
+.phony : fclean clean re all save
