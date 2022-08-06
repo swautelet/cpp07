@@ -3,8 +3,8 @@
 
 int main()
 {
+    int size = 10;
 	{
-		int size = 10;
 		Array <int> test(size);
 
 		for (int i = 0; i < size; i++)
@@ -19,7 +19,6 @@ int main()
 	}
 
 	{
-		int size = 10;
 		Array <std::string> test(size);
 
 		for (int i = 0; i < size; i++)

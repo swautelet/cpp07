@@ -41,7 +41,14 @@ class Array{
 		Array<T>& operator =(const Array<T>& copi){
 			for (unsigned int i = 0; i < this->_size; i++)
 			{
-				this->_content[i] = copi[i];
+				try
+				{
+					this->_content[i] = copi[i];
+				}
+				catch(const std::exception& e)
+				{
+					break ;
+				}
 			}
 		}
 		unsigned int size() const{
